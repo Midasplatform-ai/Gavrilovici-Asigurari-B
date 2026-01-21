@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicii - Gavrilovici Asigurări</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#003366',
+                        secondary: '#0055A4',
+                        accent: '#F2994A',
+                        light: '#f8f9fa',
+                        dark: '#0c0e13',
+                        success: '#27ae60',
+                    },
+                    backgroundImage: {
+                        'dark-radial-right': 'radial-gradient(at center right, #003366 10%, #0c0e13 75%)',
+                        'dark-radial-left': 'radial-gradient(at center left, #003366 10%, #0c0e13 75%)',
+                        'dark-radial-top': 'radial-gradient(at top center, #002244 10%, #0c0e13 85%)',
+                        'dark-radial-bottom': 'radial-gradient(at bottom center, #003366 10%, #0c0e13 75%)',
+                        'dark-silver-radial': 'radial-gradient(at center, #1a1a1a 10%, #2a2a2a 90%)',
+                        'card-dark': 'linear-gradient(180deg, #1a1f2b 0%, #0c0e13 100%)',
+                        'card-dark-hover': 'linear-gradient(180deg, #2a3040 0%, #1a1f2b 100%)',
+                        'primary-blend': 'linear-gradient(135deg, var(--tw-color-primary) 0%, #0c0e13 100%)',
+                        'accent-blend': 'linear-gradient(135deg, #F2994A 0%, #d35400 100%)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark text-light antialiased">
+    
+    <div id="scroll-progress"></div>
+
+    <header class="fixed w-full top-0 z-50 glass-nav transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center text-white group-hover:rotate-12 transition-transform">
+                    <span class="text-white font-bold text-xl">GA</span>
+                </div>
+                <div>
+                    <span class="text-white block leading-tight">Gavrilovici</span>
+                    <span class="text-secondary text-sm block font-normal">Partener Destine Broker</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="text-gray-300 hover:text-accent transition-colors">Acasă</a>
+                <a href="about.html" class="text-gray-300 hover:text-accent transition-colors">Despre Noi</a>
+                <a href="services.html" class="text-light hover:text-accent transition-colors font-medium">Servicii</a>
+                <a href="projects.html" class="text-gray-300 hover:text-accent transition-colors">Portofoliu</a>
+                <a href="contact.html" class="px-5 py-2.5 bg-accent hover:bg-orange-600 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-orange-500/30">Contact</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-light focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="fixed inset-0 bg-dark z-50 hidden flex flex-col justify-center items-center space-y-8 p-8 transition-transform duration-300 transform translate-x-full h-[400px]">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+            <a href="index.html" class="text-2xl font-semibold text-gray-300 hover:text-accent">Acasă</a>
+            <a href="about.html" class="text-xl text-gray-300 hover:text-accent">Despre Noi</a>
+            <a href="services.html" class="text-xl font-semibold text-white hover:text-accent">Servicii</a>
+            <a href="projects.html" class="text-xl text-gray-300 hover:text-accent">Portofoliu</a>
+            <a href="contact.html" class="text-xl px-8 py-3 bg-accent rounded-full text-white font-bold">Contact</a>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-20 bg-dark-radial-top">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 fade-in">Serviciile Noastre</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto fade-in">
+                Soluții complete de protecție pentru tine, familia ta și bunurile tale.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 bg-dark relative">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1: RCA -->
+                <div class="group relative rounded-2xl overflow-hidden bg-card-dark border border-white/5 hover:border-accent/30 transition-all fade-in card-hover-effect">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10"></div>
+                     <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80" alt="RCA" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 p-8 z-20">
+                        <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center text-white mb-4">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Asigurări RCA</h3>
+                        <p class="text-gray-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-0 group-hover:h-auto">
+                            Obligatorie prin lege, asigurarea RCA te protejează de prejudiciile cauzate terților. Comparăm oferte de la toți asigurătorii.
+                        </p>
+                        <a href="contact.html" class="inline-block text-accent font-semibold hover:text-white transition-colors">Cere Ofertă <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 2: CASCO -->
+                <div class="group relative rounded-2xl overflow-hidden bg-card-dark border border-white/5 hover:border-accent/30 transition-all fade-in card-hover-effect">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10"></div>
+                     <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80" alt="CASCO" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 p-8 z-20">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white mb-4">
+                            <i class="fa-solid fa-car-burst"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Asigurări CASCO</h3>
+                        <p class="text-gray-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-0 group-hover:h-auto">
+                            Protecție completă pentru mașina ta împotriva furtului, avariilor, vandalismului și fenomenelor naturale.
+                        </p>
+                        <a href="contact.html" class="inline-block text-accent font-semibold hover:text-white transition-colors">Cere Ofertă <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Locuinta -->
+                <div class="group relative rounded-2xl overflow-hidden bg-card-dark border border-white/5 hover:border-accent/30 transition-all fade-in card-hover-effect">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10"></div>
+                     <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80" alt="Locuinta" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 p-8 z-20">
+                        <div class="w-12 h-12 bg-success rounded-lg flex items-center justify-center text-white mb-4">
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Asigurări Locuință</h3>
+                        <p class="text-gray-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-0 group-hover:h-auto">
+                            PAD (obligatorie) și Facultativă. Protejează-ți căminul împotriva incendiilor, inundațiilor și cutremurelor.
+                        </p>
+                        <a href="contact.html" class="inline-block text-accent font-semibold hover:text-white transition-colors">Cere Ofertă <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Acte Auto -->
+                <div class="group relative rounded-2xl overflow-hidden bg-card-dark border border-white/5 hover:border-accent/30 transition-all fade-in card-hover-effect">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10"></div>
+                     <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80" alt="Acte Auto" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 p-8 z-20">
+                        <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-white mb-4">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Acte Auto</h3>
+                        <p class="text-gray-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-0 group-hover:h-auto">
+                            Servicii complete de înmatriculare, radiere, transcriere auto, contracte de vânzare-cumpărare.
+                        </p>
+                        <a href="contact.html" class="inline-block text-accent font-semibold hover:text-white transition-colors">Detalii <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                 <!-- Service 5: Medical / Travel -->
+                 <div class="group relative rounded-2xl overflow-hidden bg-card-dark border border-white/5 hover:border-accent/30 transition-all fade-in card-hover-effect">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10"></div>
+                     <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80" alt="Medicala" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 p-8 z-20">
+                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center text-white mb-4">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Asigurări Călătorie</h3>
+                        <p class="text-gray-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-0 group-hover:h-auto">
+                            Călătorește fără griji oriunde în lume. Acoperim cheltuielile medicale de urgență.
+                        </p>
+                        <a href="contact.html" class="inline-block text-accent font-semibold hover:text-white transition-colors">Cere Ofertă <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 6: CMR / Transport -->
+                <div class="group relative rounded-2xl overflow-hidden bg-card-dark border border-white/5 hover:border-accent/30 transition-all fade-in card-hover-effect">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10"></div>
+                     <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80" alt="Transport" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 p-8 z-20">
+                        <div class="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center text-white mb-4">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Asigurări Transport (CMR)</h3>
+                        <p class="text-gray-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-0 group-hover:h-auto">
+                            Pentru transportatori și flote. Asigurarea mărfii transportate și răspunderea transportatorului.
+                        </p>
+                        <a href="contact.html" class="inline-block text-accent font-semibold hover:text-white transition-colors">Detalii <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Process -->
+    <section class="py-20 bg-dark-radial-bottom">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Cum Lucrăm</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 text-center">
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4 border-4 border-dark shadow-xl relative z-10">1</div>
+                    <h4 class="text-xl font-bold mb-2">Ne Contactezi</h4>
+                    <p class="text-gray-400 text-sm">Ne spui de ce ai nevoie telefonic, online sau la sediu.</p>
+                </div>
+                <div class="hidden md:block w-24 h-1 bg-white/10"></div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4 border-4 border-dark shadow-xl relative z-10">2</div>
+                    <h4 class="text-xl font-bold mb-2">Primesti Oferta</h4>
+                    <p class="text-gray-400 text-sm">Analizăm piața și îți trimitem cele mai bune 3 opțiuni.</p>
+                </div>
+                <div class="hidden md:block w-24 h-1 bg-white/10"></div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-success rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4 border-4 border-dark shadow-xl relative z-10">3</div>
+                    <h4 class="text-xl font-bold mb-2">Emiterea Poliței</h4>
+                    <p class="text-gray-400 text-sm">Alegi varianta potrivită și emitem polița instant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-accent-blend text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-6">Ai nevoie de o ofertă rapidă?</h2>
+            <p class="text-white/90 text-lg mb-8">Nu pierde timpul în trafic. Rezolvăm totul online sau telefonic.</p>
+            <a href="contact.html" class="inline-block px-10 py-4 bg-white text-accent font-bold rounded-full hover:bg-gray-100 transition-colors shadow-xl">
+                Sună Acum
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 border-t border-white/10 text-sm text-center text-gray-500">
+         <p>&copy; 2026 Gavrilovici Asigurări. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despre Noi - Gavrilovici Asigurări</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#003366',
+                        secondary: '#0055A4',
+                        accent: '#F2994A',
+                        light: '#f8f9fa',
+                        dark: '#0c0e13',
+                        success: '#27ae60',
+                    },
+                    backgroundImage: {
+                        'dark-radial-right': 'radial-gradient(at center right, #003366 10%, #0c0e13 75%)',
+                        'dark-radial-left': 'radial-gradient(at center left, #003366 10%, #0c0e13 75%)',
+                        'dark-radial-top': 'radial-gradient(at top center, #002244 10%, #0c0e13 85%)',
+                        'dark-radial-bottom': 'radial-gradient(at bottom center, #003366 10%, #0c0e13 75%)',
+                        'dark-silver-radial': 'radial-gradient(at center, #1a1a1a 10%, #2a2a2a 90%)',
+                        'card-dark': 'linear-gradient(180deg, #1a1f2b 0%, #0c0e13 100%)',
+                        'card-dark-hover': 'linear-gradient(180deg, #2a3040 0%, #1a1f2b 100%)',
+                        'primary-blend': 'linear-gradient(135deg, var(--tw-color-primary) 0%, #0c0e13 100%)',
+                        'accent-blend': 'linear-gradient(135deg, #F2994A 0%, #d35400 100%)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark text-light antialiased">
+    
+    <div id="scroll-progress"></div>
+
+    <header class="fixed w-full top-0 z-50 glass-nav transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center text-white group-hover:rotate-12 transition-transform">
+                    <span class="text-white font-bold text-xl">GA</span>
+                </div>
+                <div>
+                    <span class="text-white block leading-tight">Gavrilovici</span>
+                    <span class="text-secondary text-sm block font-normal">Partener Destine Broker</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="text-gray-300 hover:text-accent transition-colors">Acasă</a>
+                <a href="about.html" class="text-light hover:text-accent transition-colors font-medium">Despre Noi</a>
+                <a href="services.html" class="text-gray-300 hover:text-accent transition-colors">Servicii</a>
+                <a href="projects.html" class="text-gray-300 hover:text-accent transition-colors">Portofoliu</a>
+                <a href="contact.html" class="px-5 py-2.5 bg-accent hover:bg-orange-600 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-orange-500/30">Contact</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-light focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="fixed inset-0 bg-dark z-50 hidden flex flex-col justify-center items-center space-y-8 p-8 transition-transform duration-300 transform translate-x-full h-[400px]">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+            <a href="index.html" class="text-2xl font-semibold text-gray-300 hover:text-accent">Acasă</a>
+            <a href="about.html" class="text-xl font-semibold text-white hover:text-accent">Despre Noi</a>
+            <a href="services.html" class="text-xl text-gray-300 hover:text-accent">Servicii</a>
+            <a href="projects.html" class="text-xl text-gray-300 hover:text-accent">Portofoliu</a>
+            <a href="contact.html" class="text-xl px-8 py-3 bg-accent rounded-full text-white font-bold">Contact</a>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-20 bg-primary-blend">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 fade-in">Povestea Noastră</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto fade-in">
+                Construim relații de încredere și oferim siguranță prin parteneriatul cu Destine Broker.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-20 bg-dark-radial-right">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 fade-in">
+                 <!-- Placeholder image -->
+                <!-- <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80" alt="Consultanta Asigurari" class="rounded-2xl shadow-2xl border border-white/10 w-full h-auto object-cover"> -->
+                <img src="images/gav-bust-img.webp" alt="Consultanta Asigurari" class="rounded-2xl shadow-2xl border border-white/10 w-full h-auto object-cover">
+            </div>
+            <div class="md:w-1/2 fade-in">
+                <h2 class="text-3xl font-bold mb-6">Cine Suntem</h2>
+                <div class="h-1 w-16 bg-accent rounded-full mb-8"></div>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Suntem o echipă dedicată de consultanți în asigurări, parteneri oficiali Destine Broker, lider pe piața de brokeraj din România. Misiunea noastră este să simplificăm procesul de asigurare pentru clienții noștri, oferind soluții clare, transparente și avantajoase.
+                </p>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Fie că ai nevoie de un RCA rapid, o asigurare de locuință complexă sau asistență în înmatricularea unui vehicul, Gavrilovici Asigurări este partenerul tău de încredere. Ne mândrim cu o abordare personală și cu disponibilitatea de a rezolva chiar și cele mai complexe situații.
+                </p>
+                <div class="flex gap-4">
+                    <div class="flex items-center gap-2 text-accent font-semibold">
+                        <i class="fa-solid fa-check-circle"></i> <span>Experiență</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-accent font-semibold">
+                        <i class="fa-solid fa-check-circle"></i> <span>Profesionalism</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-accent font-semibold">
+                        <i class="fa-solid fa-check-circle"></i> <span>Integritate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 fade-in">Valorile Noastre</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-card-dark rounded-xl border border-white/5 hover:bg-card-dark-hover transition-colors fade-in card-hover-effect">
+                    <i class="fa-solid fa-users text-4xl text-primary mb-6"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Clientul pe Primul Loc</h3>
+                    <p class="text-gray-400">Interesele tale sunt prioritatea noastră. Căutăm întotdeauna cea mai bună ofertă pentru tine, nu pentru noi.</p>
+                </div>
+                <div class="p-8 bg-card-dark rounded-xl border border-white/5 hover:bg-card-dark-hover transition-colors fade-in card-hover-effect">
+                    <i class="fa-solid fa-file-contract text-4xl text-accent mb-6"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Transparență Totală</h3>
+                    <p class="text-gray-400">Explicăm clauzele contractuale pe înțelesul tuturor. Fără costuri ascunse sau surprize neplăcute.</p>
+                </div>
+                <div class="p-8 bg-card-dark rounded-xl border border-white/5 hover:bg-card-dark-hover transition-colors fade-in card-hover-effect">
+                    <i class="fa-solid fa-bolt text-4xl text-success mb-6"></i>
+                    <h3 class="text-xl font-bold text-white mb-3">Promptitudine</h3>
+                    <p class="text-gray-400">Timpul tău este prețios. Răspundem rapid solicitărilor și emitem polițele în cel mai scurt timp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 border-t border-white/10 text-sm">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+             <p>&copy; 2026 Gavrilovici Asigurări. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>
