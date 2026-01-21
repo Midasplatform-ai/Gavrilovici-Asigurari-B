@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <title>Gavrilovici Asigurări - Partener Destine Broker</title>
     <meta name="description" content="Servicii complete de asigurări și acte auto. RCA, CASCO, asigurări de locuință și consultanță daune. Partener Destine Broker.">
     
@@ -60,12 +64,12 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo -->
             <a href="index.html" class="text-2xl font-bold flex items-center gap-2 group">
-                <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center text-white group-hover:rotate-12 transition-transform">
-                    <span class="text-white font-bold text-xl">GA</span>
+                  <div class=" bg-accent rounded-lg flex items-center justify-center text-white group-hover:rotate-12 transition-transform shadow-lg shadow-accent/50">
+                    <img class="rounded-lg w-12" src="images/gav-logo.webp" alt="logo">
                 </div>
                 <div>
-                    <span class="text-white block leading-tight">Gavrilovici</span>
-                    <span class="text-secondary text-sm block font-normal">Partener Destine Broker</span>
+                    <span class="text-white text-sm block leading-tight group-hover:text-accent transition-colors">Gavrilovici Asigurări</span>
+                    <span class="text-secondary text-xs block font-normal">Partener Destine Broker</span>
                 </div>
             </a>
 
@@ -102,7 +106,7 @@
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
              <!-- Placeholder for future image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80" -->
-            <div class="absolute inset-0 bg-[url('images/gav-dest-parteneri.webp')] bg-cover bg-center opacity-20"></div>
+            <div class="absolute inset-0 bg-[url('images/gav-dest-parteneri.webp')] bg-cover bg-center opacity-30"></div>
             <div class="absolute inset-0 bg-hero-overlay"></div>
         </div>
 
@@ -227,6 +231,71 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-dark border-b border-white/5">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 fade-in">Ce Spun Clienții Noștri</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-card-dark p-8 rounded-xl border border-white/5 fade-in hover:bg-card-dark-hover transition-colors">
+                    <div class="flex text-accent mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"Profesionalism și promptitudine! Am avut nevoie de un RCA urgent și totul s-a rezolvat în 10 minute pe WhatsApp. Recomand cu încredere!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">M</div>
+                        <div>
+                            <h4 class="text-white font-bold">Marius P.</h4>
+                            <span class="text-gray-500 text-sm">Client RCA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-card-dark p-8 rounded-xl border border-white/5 fade-in transition-delay-100 hover:bg-card-dark-hover transition-colors">
+                    <div class="flex text-accent mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"Doamna Iuliana m-a ajutat enorm cu dosarul de daună. Nu a trebuit să mă stresez cu nimic, s-a ocupat de toate actele. Mulțumesc!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-bold">A</div>
+                        <div>
+                            <h4 class="text-white font-bold">Andreea I.</h4>
+                            <span class="text-gray-500 text-sm">Dosar Daună</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-card-dark p-8 rounded-xl border border-white/5 fade-in transition-delay-200 hover:bg-card-dark-hover transition-colors">
+                    <div class="flex text-accent mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"Servicii excelente pentru flota noastră. Am primit o ofertă foarte bună pentru CASCO și RCA. Colaborare pe termen lung!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-success rounded-full flex items-center justify-center text-white font-bold">V</div>
+                        <div>
+                            <h4 class="text-white font-bold">Vlad T.</h4>
+                            <span class="text-gray-500 text-sm">Manager Transport</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="py-20 bg-dark-radial-top">
         <div class="container mx-auto px-6 max-w-4xl">
@@ -307,8 +376,8 @@
                 <!-- Col 1 -->
                 <div>
                     <div class="flex items-center gap-2 mb-4">
-                        <i class="fa-solid fa-shield-halved text-accent text-xl"></i>
-                        <span class="text-xl font-bold text-white">Gavrilovici</span>
+                        <img class="rounded-lg w-12" src="images/gav-logo.webp" alt="logo">
+                        <span class="text-xl font-bold text-white">Gavrilovici Asigurări</span>
                     </div>
                     <p class="text-gray-500 mb-4">Partener Destine Broker de Asigurare-Reasigurare. Soluții complete pentru siguranța ta.</p>
                 </div>
@@ -340,8 +409,8 @@
                     <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Contact</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-accent"></i> <span>Adresa ta, Oraș, România</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-accent"></i> <span>07xx xxx xxx</span></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-accent"></i> <span>contact@gavriloviciasigurari.ro</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-accent"></i> <span>0748 974 275 / 0758 377 732</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-envelope text-accent mt-1"></i> <span class="text-xs">gavriloviciasig@gmail.com<br>gavriloviciiuliana@gmail.com</span></li>
                     </ul>
                 </div>
             </div>
@@ -349,9 +418,9 @@
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-600 text-center md:text-left">&copy; 2026 Gavrilovici Asigurări. Toate drepturile rezervate.</p>
                 <div class="flex space-x-4 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/GavriloviciAsig/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/gavrilovici.asig/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/40748974275" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
